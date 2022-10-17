@@ -13,7 +13,7 @@ function NavBar() {
         <div className="navbar-logo">
           <img src={images.logo2} alt="logo" />
         </div>
-        <ul className="app__navbar-links">
+        <ul className="navbar-links">
           <li>
             <Link to="/">Strona Główna</Link>
             <div />
