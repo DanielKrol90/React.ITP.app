@@ -5,3 +5,4 @@ Added to the project:
 3) Motion - Framer
 4) React - Icons
 5) Material UI
+^) Animate.css

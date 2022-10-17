@@ -1,39 +1,11 @@
-@import "~bootstrap/scss/bootstrap";
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url(./assets/heroHeader/cows.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+  background-image: url(./assets/heroHeader/cows.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
-
-.p-text {
-    font-size: 0.8rem;
-    text-align: left;
-    color: var(--gray-color);
-    line-height: 1.5;
-  
-    @media screen and (min-width: 2000px) {
-      font-size: 1.75rem;
-    }
-  }
-
-  .bold-text {
-    font-size: 1rem;
-    font-weight: 800;
-    color: var(--black-color);
-    text-align: left;
-  
-    @media screen and (min-width: 2000px) {
-      font-size: 2rem;
-    }
-  
-    @media screen and (max-width: 450px) {
-      font-size: 0.9rem;
-    }
-  }

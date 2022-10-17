@@ -4,6 +4,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import { Home, About, News, Offer, Contact, Shop } from "../../routes";
 import { images } from "../../constants";
 
+
 import "./NavBar.scss";
 
 function NavBar() {
@@ -15,7 +16,7 @@ function NavBar() {
         </div>
         <ul className="navbar-links">
           <li>
-            <Link to="/">Strona Główna</Link>
+            <Link to="/" className="animate__pulse">Strona Główna</Link>
             <div />
           </li>
           <li>
