@@ -1,52 +1,55 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
 
-import { images } from '../../constants'
+import { Home, About, News, Offer, Contact, Shop } from "../../routes";
+import { images } from "../../constants";
+
+import "./NavBar.scss";
 
 function NavBar() {
   return (
-    <Navbar bg="light" expand="lg">
-      <Container fluid>
-        <Navbar.Brand href="/">{images.logo2}</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
-          </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <>
+      <nav className="navbar">
+        <div className="navbar-logo">
+          <img src={images.logo2} alt="logo" />
+        </div>
+        <ul className="app__navbar-links">
+          <li>
+            <Link to="/">Strona Główna</Link>
+            <div />
+          </li>
+          <li>
+            <Link to="o_firmie">O Firmie</Link>
+            <div />
+          </li>
+          <li>
+            <Link to="aktualnosci">Aktualności</Link>
+            <div />
+          </li>
+          <li>
+            <Link to="oferta">Oferta</Link>
+            <div />
+          </li>
+          <li>
+            <Link to="kontakt">Kontakt</Link>
+            <div />
+          </li>
+          <li>
+            <Link to="sklep">Sklep Online</Link>
+            <div />
+          </li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="o_firmie/*" element={<About />} />
+        <Route path="aktualnosci/*" element={<News />} />
+        <Route path="oferta/*" element={<Offer />} />
+        <Route path="kontakt/*" element={<Contact />} />
+        <Route path="sklep/*" element={<Shop />} />
+      </Routes>
+    </>
   );
 }
 
