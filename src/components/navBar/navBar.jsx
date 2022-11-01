@@ -7,6 +7,7 @@ import { images } from "../../constants";
 
 import "./NavBar.scss";
 
+
 function NavBar() {
   return (
     <>
@@ -16,7 +17,7 @@ function NavBar() {
         </div>
         <ul className="navbar-links">
           <li>
-            <Link to="/" className="animate__pulse">Strona Główna</Link>
+            <Link to="/">Strona Główna</Link>
             <div />
           </li>
           <li>
